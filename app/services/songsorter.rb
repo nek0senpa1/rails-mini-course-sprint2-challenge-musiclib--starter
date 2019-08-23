@@ -1,4 +1,4 @@
-class SongSorter
+class Songsorter
 
     def initialize(list, sortval)
         @list = list
@@ -11,9 +11,10 @@ class SongSorter
 
         #Not sure what the sort type would be just yet...
 
-        list.sort_by { rand }
-
-        puts list
+        @list.sort_by { rand }
+       
+        # seems my puts was killing my function...
+        # puts @lsit
 
     end
 
