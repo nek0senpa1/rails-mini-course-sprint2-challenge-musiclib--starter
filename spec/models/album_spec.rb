@@ -11,7 +11,7 @@ RSpec.describe Album, type: :model do
       res = albym.valid?
       error = albym.errors.full_messages
 
-      expect(res)to be true
+      expect(res).to be true
 
     end
 
@@ -22,7 +22,7 @@ RSpec.describe Album, type: :model do
       res = albym.valid?
       error = albym.errors.full_messages
 
-      expect(res)to be false
+      expect(res).to be false
 
 
     end
