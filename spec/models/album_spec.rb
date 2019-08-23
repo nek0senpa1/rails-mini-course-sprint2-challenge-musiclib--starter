@@ -1,15 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe Album, type: :model do
+
   describe "validations" do
+    
     it "is valid" do
       # instantiate a valid album and ensure it is valid
+
+      albym = Album.new(name: "The Downward Spiral II", artist_id: 1)
+      res = albym.valid?
+      error = albym.errors.full_messages
+
+      expect(res)to be true
+
     end
 
     it "is invalid without a name" do
       # instantiate an album without a name and ensure it is invalid
+
+      albym = Album.new(name: "The Downward Spiral II", artist_id: 1)
+      res = albym.valid?
+      error = albym.errors.full_messages
+
+      expect(res)to be false
+
+
     end
+
   end
+
+
+
+
 
   describe "attributes" do
     it "has expected attributes" do
