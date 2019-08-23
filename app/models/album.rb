@@ -6,7 +6,7 @@ class Album < ApplicationRecord
 
 
   def length_seconds
-    album.songs.reduce(0) { |length, song| length + song.length_seconds }
+    songs.reduce(0) { |length, song| length + song.length_seconds }
   end
 
 end
